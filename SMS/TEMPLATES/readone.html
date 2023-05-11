@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>readone</title>
+</head>
+<body>
+<p>READ ONE</p>
+<form action="readone" method="POST">
+  {% csrf_token %}
+
+  <p>ID: </p>
+  <input type = "text" name="id"/>
+  <br>
+  <input type = "submit" />
+</form>
+
+<p>Name: <B>{{item.name}}</B></p>
+<p>RAM: <B>{{item.RAM}}</B></p>
+<p>price: <B>{{item.price}}</B></p>
+<p>location: <B>{{item.location}}</B></p>
+
+</body>
+</html>

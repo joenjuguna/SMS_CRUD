@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPDATE</title>
+</head>
+<body>
+<form action="update" method="POST">
+  {% csrf_token %}
+  <p>id: </p>
+  <input type = "text" name="id" value="{{items.id}}"/>
+  <p>Name: </p>
+  <input type = "text" name="name" value="{{items.name}}"/>
+  <p>RAM: </p>
+  <input type = "text" name="RAM" value="{{items.RAM}}"/>
+  <p>Price: </p>
+  <input type = "text" name="price" value="{{items.price}}">
+  <p>Location: </p>
+  <input type = "text" name="location" value="{{items.location}}"/>
+  <br>
+  <input type = "submit" />
+</form>
+
+</body>
+</html>

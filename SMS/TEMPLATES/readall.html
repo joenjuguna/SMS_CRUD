@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>readall</title>
+
+</head>
+<body>
+<p> <H1>READ ALL</H1></p>
+{% for items in item %}
+
+<p>Name: <B>{{items.name}}</B></p>
+<p>RAM: <B>{{items.RAM}}</B></p>
+<p>price: <B>{{items.price}}</B></p>
+<p>location: <B>{{items.location}}</B></p>
+
+
+<form action="delete" method="POST">
+    {% csrf_token %}
+    <input type="text" value="{{items.id}}" hidden="true" name="id"/>
+    <input type="submit" value="DELETE"/>
+</form>
+</br>
+
+<form action="update" method="GET">
+    {% csrf_token %}
+    <input type="text" value="{{items.id}}" hidden="true" name="id"/>
+    <input type="submit" value="UPDATE"/>
+</form>
+
+{% endfor %}
+
+</body>
+</html>
